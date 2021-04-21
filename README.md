@@ -45,7 +45,7 @@
 - (local) Login with your credentials
     - `ssh {USERNAME}@ieng6.ucsd.edu`
 - Launch your pod. You should enter a node with 1 GPU, 8 CPU, 16 GB RAM, with normal priority (running up to 6 hours)
-    ``launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
+``launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
     - To enable longer runtime k (up to 12) hours with normal priority
     ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
     - To enable longer runtime k (more than 12) hours with lower priority
