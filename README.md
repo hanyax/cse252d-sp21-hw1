@@ -11,11 +11,11 @@
  (b) Rename your submission files as Lastname_Firstname.ipynb and Lastname_Firstname.pdf.  
  (c) Correctly select pages for each answer on Gradescope to allow proper grading.
 
-6. **Due date:** Assignments are due Mon, May 3, by 4pm PST.
+6. **Due date:** Assignments are due Mon, May 5, by 4pm PST.
 
 ### Steps to access and complete homework
 - Clone the homework repository
-    - ``git clone https://github.com/eric-yyjau/cse252c_hw1.git``
+    - ``git clone https://github.com/ViLab-UCSD/cse252d-sp21-hw1.git``
 - The homework is in the Jupyter Notebook ``hw1-CSE252D.ipynb``
 - Follow the README (this file) for installation, data and compute instructions.
 
@@ -44,20 +44,19 @@
 - (local) **(IMPORTANT) Connect your [UCSD VPN](https://blink.ucsd.edu/technology/network/connections/off-campus/VPN/index.html)**
 - (local) Login with your credentials
     - `ssh {USERNAME}@ieng6.ucsd.edu`
-- If you cannot launch a pod, set up the environment following these [instructions](https://docs.google.com/document/d/e/2PACX-1vR-tC1oL6J9RJxSP42iWr8BukgRO9ohcybFXPn95yjQQLvv4iNP5Tlbzx06rQtPA-fLex2N_MVjzgAR/pub?embedded=true)
 - Launch your pod. You should enter a node with 1 GPU, 8 CPU, 16 GB RAM, with normal priority (running up to 6 hours)
-    - ``launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
-- To enable longer runtime k (up to 12) hours with normal priority
-    - ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
-- To enable longer runtime k (more than 12) hours with lower priority
-    - ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8``
+    ``launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
+    - To enable longer runtime k (up to 12) hours with normal priority
+    ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
+    - To enable longer runtime k (more than 12) hours with lower priority
+    ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8``
 - You will be provided with a URL that you can open locally:
     ![](demo_jupyter.png)
     - Click on the link. Then natigate to the jupyter notebook for a question which you are going to git clone as follows
-
+- If you cannot launch a pod, set up the environment following these [instructions](https://support.ucsd.edu/its?id=kb_article_view&sys_kb_id=cbb951c31b42a050df40ed7dee4bcb9e)
     
 ### 2. Pull the repo and install dependencies
-- ``git clone https://github.com/eric-yyjau/cse252c_hw1.git``
+- ``git clone https://github.com/ViLab-UCSD/cse252d-sp21-hw1.git``
 - ``cd cse252d_hw1``
 - Install dependencies (Python 3.X with Pip)
     - ``pip install -r requirements.txt --user``
@@ -91,7 +90,7 @@ To fetch the files you can use commands like `scp` to transfer files from the cl
 
 
 
-## 4. [Extra] How to run training sessions
+## 4. [Extra] How to run training sessions without keeping connection for hours
 
 ### 1. Set up the environment
 
