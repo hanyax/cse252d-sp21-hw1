@@ -51,6 +51,7 @@
         - ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8 -p normal``
     - To enable longer runtime k (more than 12) hours with lower priority
         - ``K8S_TIMEOUT_SECONDS=$((3600*k)) launch-scipy-ml.sh -i ucsdets/cse152-252-notebook:latest -g 1 -m 16 -c 8``
+    - To run your container in the background up to 12 hours, add ``-b`` to above command. See details [here](https://support.ucsd.edu/its?id=kb_article_view&sys_kb_id=c72a818f1b8e6050df40ed7dee4bcb31).
 - You will be provided with a URL that you can open locally:
     ![](demo_jupyter.png)
     - Click on the link. Then natigate to the jupyter notebook for a question which you are going to git clone as follows
@@ -92,6 +93,7 @@ To fetch the files you can use commands like `scp` to transfer files from the cl
 
 
 ## 4. [Extra] How to run training sessions without keeping connection for hours
+You can run your container in the backgound (See Section 1.1.2) or use TMUX, as explained in the following.
 
 ### 1. Set up the environment
 
